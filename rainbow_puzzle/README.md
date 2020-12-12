@@ -3,15 +3,19 @@
 ### Overview
 
 _main.dart_: app initialization and top-level UI widget rendering
+
 _board.dart_: gesture detection and game board rendering
+
 _piece.dart_: game piece model / rendering / animations
+
 _controller.dart_: process turns / update board / other game logic
+
 _score.dart_: track score and refresh view when score is changed
+
 _start_button.dart_: updates start button text depending on game state
 
 ## Gameplay
-
-![](https://github.com/einoorish/FlutterGames/blob/master/rainbow_puzzle/gameplay.gif)
+<img src="https://github.com/einoorish/FlutterGames/blob/master/rainbow_puzzle/gameplay.gif" width="30%" height="30%">
 
 1. The game board renders the game pieces based on their current x/y positions on the board.
 2. When a *swipe gesture* is detected, a turn is taken.
@@ -63,7 +67,7 @@ Board:
 ```
 
 *GestureDetector* captures and averages DragUpdateDetails and DragEndDetails, then submits the result to Controller.
-*StreamSubscription*'s event listener is set up to receive update events from the Controller to re-draw the UI after each turn (on swipe end)
+*StreamSubscription*'s event listener is set up to receive update events from the Controller to re-draw the UI after each turn
 
 ### Dependencies
 | Dependency | Usage |
